@@ -1,0 +1,17 @@
+<view>
+  <view class="car_item_wrap" wx:for="{{carArray}}" wx:if="{{item.carShow}}">
+        <view class="car_image_wrap">
+            <image src="{{item.carImage}}" class="car_item_image"></image>
+        </view>
+        <view class="car_item_title">
+            <text class="text_css">{{item.carTitle}}</text>
+            <text class="text_css1">已签到</text>
+            <view bindtap='carRemove'>
+              <image class="car_item_del" src='../../../img/shanchu.png'></image>
+            </view>
+        </view>
+  </view>
+  <view class="car_list_bot">
+		共有<text class="red">{{peopleNum}}</text>名成员
+	</view>
+</view>

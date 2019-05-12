@@ -1,0 +1,115 @@
+/* pages/index/index.wxss */
+.container {
+}
+
+.container .top {
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+  color: #2d2f33;
+  border-bottom: 1px solid #eee;
+  /* padding: 15rpx 0; */
+  box-sizing: border-box;
+}
+
+.tab {
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+
+.seiperTab {
+  width: 100%;
+  height: calc(100vh - 190rpx);
+}
+
+/*我的关注  */
+
+.scroll {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item {
+  padding: 0 23rpx;
+  box-sizing: border-box;
+}
+
+.headimg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+  border: 3rpx solid #d4a854;
+}
+
+.people {
+  padding: 28rpx 10rpx 32rpx 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.per-info {
+  width: 362rpx;
+}
+
+.per-info .name {
+  font-size: 36rpx;
+  color: #2d2f33;
+}
+
+.per-info .company {
+  font-size: 28rpx;
+  color: #666;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.per-info .less {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.care-doing{
+  display: flex;
+  padding: 18rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #000;
+  align-items: center;
+  border: 1px solid #ffff66;
+  border-radius: 10rpx;
+  background: #ffff66;
+}
+.care-sign{
+  display: flex;
+  padding: 18rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #000;
+  align-items: center;
+  border: 1px solid #00ccff;
+  border-radius: 10rpx;
+  background: #00ccff;
+}
+.care-end{
+  display: flex;
+  padding: 18rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #999;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  background: #ddd;
+}
+.active {
+  border-bottom: 4rpx solid #409eff;
+  color: #409eff;
+  font-weight: bold;
+}

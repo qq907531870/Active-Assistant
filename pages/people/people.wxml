@@ -1,0 +1,48 @@
+<!--pages/people/people.wxml-->
+<view class="container">
+  <view class="my-header">
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <image class="user-avatar" src="/img/face.png" mode="aspectFill"></image>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="register">登录</button>
+      </block>
+      <block wx:else>
+        <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+  </view>
+
+  <view class="item-cells">
+    <view class="item-cell item-cell-access" catchtap="informationTap">
+      <view class="item-cell-bd">
+        <text>我的信息</text>
+      </view>
+      <view class="item-cell-ft"></view>
+    </view>
+  </view>
+
+  <view class="item-cells">
+      <view class="item-cell item-cell-access" catchtap="tomyevent">
+        <view class="item-cell-bd">
+          <text>我创建的签到</text>
+        </view>
+        <view class="item-cell-ft"></view>
+      </view>
+  </view> 
+  <view class="item-cells">
+    <view class="item-cell item-cell-access" catchtap="myDeliveryTap">
+      <view class="item-cell-bd">
+        <text>评论留言消息</text>
+      </view>
+      <view class="item-cell-ft"></view>
+    </view>
+  </view>
+
+  <view class="item-cells">
+    <view class="item-cell item-cell-access" catchtap="deliveryComments">
+      <view class="item-cell-bd">
+        <text>联系我们</text>
+      </view>
+      <view class="item-cell-ft"></view>
+    </view>
+  </view> 
+</view>

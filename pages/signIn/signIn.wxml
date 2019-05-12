@@ -1,0 +1,85 @@
+<!--pages/signIn/signIn.wxml-->
+<view class="container">
+  <view class="navbar" style=" z-index:50">
+    <view wx:for="{{navbar}}" data-idx="{{index}}" wx:key="unique" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">
+      <view class="notice" wx:if="{{count[index]>0}}">{{count[index]}}</view>
+      {{item}}
+    </view>
+  </view>
+
+  <!--进行中-->
+  <view hidden="{{currentTab !== 0}}" id="one">
+    <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
+      <swiper-item>
+        <scroll-view class='scroll' scroll-y>
+          <block wx:for="{{myCare}}">
+            <view wx:if="{{item.care==0}}" class='people'>
+              <image src='{{item.userHead}}' class='headimg'></image>
+              <view class='per-info'>
+                <view class='name'>{{item.name}}</view>
+                <view class='company'>{{item.introduce}}</view>
+                <view class='less'>{{item.position}}</view>
+              </view>
+              <view class='care-doing' catchtap='care'>
+                <block>
+                  <view>进行中</view>
+                </block>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--未开始-->
+  <view hidden="{{currentTab !== 1}}" id="one">
+    <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
+      <swiper-item>
+        <scroll-view class='scroll' scroll-y>
+          <block wx:for="{{myCare}}">
+            <view class='people' wx:if="{{item.care==1}}">
+              <image src='{{item.userHead}}' class='headimg'></image>
+              <view class='per-info'>
+                <view class='name'>{{item.name}}</view>
+                <view class='company'>{{item.introduce}}</view>
+                <view class='less'>{{item.position}}</view>
+              </view>
+              <view class='care-sign' catchtap='care'>
+                <block>
+                  <view>已报名</view>
+                </block>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--已结束-->
+  <view hidden="{{currentTab !== 2}}" id="one">
+    <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
+          <swiper-item>
+            <scroll-view class='scroll' scroll-y>
+              <block wx:for="{{myCare}}">
+                <view wx:if="{{item.care==2}}" class='people'>
+                  <image src='{{item.userHead}}' class='headimg'></image>
+                  <view class='per-info'>
+                    <view class='name'>{{item.name}}</view>
+                    <view class='company'>{{item.introduce}}</view>
+                    <view class='less'>{{item.position}}</view>
+                  </view>
+                  <view class='care-end' catchtap='care'>
+                    <block>
+                      <view>已结束</view>
+                    </block>
+                  </view>
+                </view>
+              </block>
+            </scroll-view>
+          </swiper-item>
+        </swiper>
+  </view>
+
+</view>

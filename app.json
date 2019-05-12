@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/people/people",
+    "pages/author/author",
+    "pages/post/post",
+    "pages/signIn/signIn",
+    "pages/event/event",
+    "pages/myevents/myevent/event",
+    "pages/myevents/manage/manage",
+    "pages/myevents/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "傻逼刘迪涛",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#006df0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/log1.png",
+        "selectedIconPath": "img/log1-1.png",
+        "text": "活动中心"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "iconPath": "img/log2.png",
+        "selectedIconPath": "img/log2-1.png",
+        "text": "新建签到"
+      },
+      {
+        "pagePath": "pages/signIn/signIn",
+        "iconPath": "img/log4.png",
+        "selectedIconPath": "img/log4-1.png",
+        "text": "我的签到"
+      },
+      {
+        "pagePath": "pages/people/people",
+        "iconPath": "img/log3.png",
+        "selectedIconPath": "img/log3-1.png",
+        "text": "个人信息"
+      }
+
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

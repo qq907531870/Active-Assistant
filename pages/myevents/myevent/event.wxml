@@ -1,0 +1,49 @@
+
+<!--pages/location/event/event.wxml-->
+<view class="container">
+  <view class="event-poster {{categoryColor}}">
+    <image class="poster poster-spacing" src="../../../img/log1.png"></image>
+  </view>
+  <view class="event-header event-session-spacing">
+    <text class="event-title">{{title}}</text>
+  </view>
+  <view class="event-action event-session-spacing">
+    <view class="event-schedule" bindtap="handleSchedule">
+      <image class="action-icon" src="../../../img/schedule.png"></image>
+      <label class="action-label" for="schedule">开始时间
+        <text id="schedule" class="action-text">{{time_start}}</text>
+      </label>
+    </view>
+        <view class="event-ticket" bindtap="handleTicket">
+      <image class="action-icon" src="../../../img/ticket.png"></image>
+      <label class="action-label" for="ticket">结束时间
+        <text id="ticket" class="action-text">{{time_end}}</text>
+      </label>
+    </view>
+    <view class="event-map" bindtap="handleMap">
+      <image class="action-icon" src="../../../img/map.png"></image>
+      <label class="action-label" for="map">活动地点
+        <text id="map" class="action-text">{{address}}</text>
+      </label>
+    </view>
+    <view wx:if="{{true}}" class="event-phone">
+      <image class="action-icon" src="../../../img/phone.png"></image>
+      <label class="action-label" for="phone">限制人数
+        <text id="phone" class="action-text">{{phone}}</text>
+      </label>
+    </view>
+    <view wx:if="{{true}}" class="event-phone" bindtap="handlePhone">
+      <image class="action-icon" src="../../../img/phone.png"></image>
+      <label class="action-label" for="phone">联系方式
+        <text id="phone" class="action-text">{{people_number}}</text>
+      </label>
+    </view>
+  </view>
+  <view class="content-session content-session-spacing">
+    <view class="text-container">123123123123123123</view>
+  </view>
+  <view><text>/t/t</text></view>
+  <button bindtap="delect_activity" type="primary" class="baoming">删除</button>
+  
+  <button bindtap="to_people" type="primary" class="baoming1">人员</button>
+</view>
