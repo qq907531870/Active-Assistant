@@ -9,6 +9,7 @@
     "pages/myevents/myevent/event",
     "pages/myevents/manage/manage",
     "pages/myevents/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
