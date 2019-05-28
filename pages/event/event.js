@@ -7,9 +7,11 @@ Page({
     title:"华广游泳馆比赛",
     time_start:"2019-1-1",
     time_end:"2019-2-2",
-    address:"华南理工大学广州学院",
-    phone:"15815877168",
-    people_number:"10"
+    address:"华南理工大学广州学院华南理工大学广州学院",
+    phone:"158158771681588158158158771681588158",
+    people_number:"10",
+    call_me:"手机号",
+    erWeiMa:"../../img/log1.png"
   },
 
   /**
@@ -66,5 +68,17 @@ Page({
    */
   onShareAppMessage: function () {
     
+  }
+  , 
+  add:function(event){
+    wx.showToast({
+      title: '报名成功'
+    })
+  }
+  ,
+  getAddress: function (event) {
+    wx.showModal({
+      content: this.data.address
+    })
   }
 })

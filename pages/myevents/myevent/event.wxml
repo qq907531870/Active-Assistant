@@ -7,43 +7,61 @@
   <view class="event-header event-session-spacing">
     <text class="event-title">{{title}}</text>
   </view>
+  <view class="user-action event-session-spacing">
+    <text class="wish" bindtap="delect_activity">删除</text>
+    <text class="join" bindtap="to_people">人员</text>
+  </view>
   <view class="event-action event-session-spacing">
-    <view class="event-schedule" bindtap="handleSchedule">
+    <view class="event-schedule">
       <image class="action-icon" src="../../../img/schedule.png"></image>
       <label class="action-label" for="schedule">开始时间
         <text id="schedule" class="action-text">{{time_start}}</text>
       </label>
     </view>
-        <view class="event-ticket" bindtap="handleTicket">
+        <view class="event-ticket">
       <image class="action-icon" src="../../../img/ticket.png"></image>
       <label class="action-label" for="ticket">结束时间
         <text id="ticket" class="action-text">{{time_end}}</text>
       </label>
     </view>
-    <view class="event-map" bindtap="handleMap">
+    <view class="event-map" bindtap="getAddress">
       <image class="action-icon" src="../../../img/map.png"></image>
       <label class="action-label" for="map">活动地点
         <text id="map" class="action-text">{{address}}</text>
       </label>
     </view>
-    <view wx:if="{{true}}" class="event-phone">
+    <view class="event-phone" >
       <image class="action-icon" src="../../../img/phone.png"></image>
       <label class="action-label" for="phone">限制人数
         <text id="phone" class="action-text">{{phone}}</text>
       </label>
     </view>
-    <view wx:if="{{true}}" class="event-phone" bindtap="handlePhone">
-      <image class="action-icon" src="../../../img/phone.png"></image>
+    <view class="event-phone" >
+      <image class="action-icon" src="../../../img/xingxing.png"></image>
       <label class="action-label" for="phone">联系方式
         <text id="phone" class="action-text">{{people_number}}</text>
       </label>
     </view>
+    <view class="event-phone">
+      <image class="action-icon" src="../../../img/aixin.png"></image>
+      <label class="action-label" for="phone">签到码
+          <l-button shape="semicircle" type="success" width="100" height="42" class="l-buttonCss" bindtap="getYaoqingma">获取签到码</l-button>
+          <l-dialog show="{{show_state}}" type="confirm" show-title="false" title="签到码">
+            <text>{{yaoQingMa}}</text>
+            <text>\n</text>
+            <l-button size="mini" type="success" shape="semicircle" bindtap="modifyYaoQingMa">更换</l-button>
+          </l-dialog>
+      </label>
+    </view>
+    <view class="event-phone">
+      <image class="action-icon" src="../../../img/wuzi.png"></image>
+      <label class="action-label" for="phone">群二维码</label>
+      <block>
+        <image class="action-image" src="{{erWeiMa}}"></image>
+      </block>
+    </view>
   </view>
   <view class="content-session content-session-spacing">
-    <view class="text-container">123123123123123123</view>
+    <view class="text-container">{{string}}</view>
   </view>
-  <view><text>/t/t</text></view>
-  <button bindtap="delect_activity" type="primary" class="baoming">删除</button>
-  
-  <button bindtap="to_people" type="primary" class="baoming1">人员</button>
 </view>

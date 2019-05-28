@@ -4,12 +4,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    show_state:false,
     title:"华广游泳馆比赛",
     time_start:"2019-1-1",
     time_end:"2019-2-2",
     address:"华南理工大学广州学院",
     phone:"15815877168",
-    people_number:"10"
+    people_number:"10",
+    erWeiMa: "../../../img/log1.png"
   },
 
   /**
@@ -68,8 +70,11 @@ Page({
     
   },
   sign:function(event){
-    wx.showToast({
-      title: '签到成功'
+    this.setData({"show_state": true });
+  },
+  getAddress: function (event) {
+    wx.showModal({
+      content: this.data.address
     })
   }
 })

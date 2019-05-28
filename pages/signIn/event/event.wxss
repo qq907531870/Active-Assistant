@@ -45,15 +45,27 @@
   font-size: 24rpx;
   color: #9e9e9e;
 }
+.user-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-
-
-.user-action .join{
+.user-action .join, .user-action .wish {
   color: #de9703;
   border: 1px solid #de9703;
   border-radius: 8rpx;
   text-align: center;
+  padding: 10rpx 100rpx 10rpx 100rpx;
 }
+
+
+/* .user-action .join{
+  color: #de9703;
+  border: 1px solid #de9703;
+  border-radius: 8rpx;
+  text-align: center;
+} */
 
 .event-action {
   display: flex;
@@ -225,4 +237,13 @@
   position: fixed;
 	bottom: 0;
 	width: 100%;
+}
+.text_input{
+  width: 90px;
+  border-bottom: 1px #369 solid;
+}
+.action-image{
+  display: block;
+  width: 60%;
+  height: 160px;
 }

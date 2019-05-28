@@ -1,32 +1,34 @@
 <view class="container">
   <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
+    <l-search-bar placeholder="搜索" bg-color="#f6f6f6" shape="circle"/>
     <swiper-item>
       <scroll-view class='scroll' scroll-y>
         <block wx:for="{{myCare}}">
-          <view class='people'>
+          <view class='people' catchtap='care'>
             <image src='{{item.userHead}}' class='headimg'></image>
             <view class='per-info'>
               <view class='name'>{{item.name}}</view>
               <view class='company'>{{item.introduce}}</view>
               <view class='less'>{{item.position}}</view>
             </view>
-            <view wx:if="{{item.care==0}}" class='care-doing' catchtap='care'>
+            <view wx:if="{{item.care==0}}" class='care-doing' >
               <block>
                 <view>进行中</view>
               </block>
             </view>
-            <view wx:if="{{item.care==1}}" class='care-sign' catchtap='care'>
+            <view wx:if="{{item.care==1}}" class='care-sign' >
               <block>
                 <view>已报名</view>
               </block>
             </view>
-            <view wx:if="{{item.care==2}}" class='care-end' catchtap='care'>
+            <view wx:if="{{item.care==2}}" class='care-end'>
               <block>
                 <view>已结束</view>
               </block>
             </view>
           </view>
         </block>
+        <text>\n\n</text>
       </scroll-view>
     </swiper-item>
   </swiper>

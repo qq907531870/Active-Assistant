@@ -9,7 +9,10 @@ Page({
     time_end:"2019-2-2",
     address:"华南理工大学广州学院",
     phone:"15815877168",
-    people_number:"10"
+    people_number:"10",
+    yaoQingMa:"null",
+    show_state:false,
+    erWeiMa: "../../../img/log1.png"
   }, 
   to_people: function (event) {
     console.log("123");
@@ -32,6 +35,16 @@ Page({
         }
       }
     })
+  },
+  getYaoqingma:function (event){
+    this.setData({ "yaoQingMa": "A2B4C6","show_state":true});
+  },
+  modifyYaoQingMa: function (event) {
+    this.setData({ "yaoQingMa": "123456", "show_state": true });
+  },
+  getAddress: function (event) {
+    wx.showModal({
+      content: this.data.address
+    })
   }
-
 })

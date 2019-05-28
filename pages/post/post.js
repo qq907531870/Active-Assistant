@@ -23,6 +23,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+
     notice_status: false,
     accounts: ["手机号", "QQ号", "微信号"],
     accountIndex: 0,

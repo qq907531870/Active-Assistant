@@ -57,7 +57,7 @@ Page({
   },
   care: function () {
     wx.navigateTo({
-      url: 'signln_event/event',
+      url: 'event/event',
     })
   }
 })

@@ -8,35 +8,42 @@
     <text class="event-title">{{title}}</text>
   </view>
   <view class="event-action event-session-spacing">
-    <view class="event-schedule" bindtap="handleSchedule">
+    <view class="event-schedule" >
       <image class="action-icon" src="../../../img/schedule.png"></image>
       <label class="action-label" for="schedule">开始时间
         <text id="schedule" class="action-text">{{time_start}}</text>
       </label>
     </view>
-        <view class="event-ticket" bindtap="handleTicket">
+    <view class="event-ticket">
       <image class="action-icon" src="../../../img/ticket.png"></image>
       <label class="action-label" for="ticket">结束时间
         <text id="ticket" class="action-text">{{time_end}}</text>
       </label>
     </view>
-    <view class="event-map" bindtap="handleMap">
+    <view class="event-map" bindtap="getAddress">
       <image class="action-icon" src="../../../img/map.png"></image>
       <label class="action-label" for="map">活动地点
         <text id="map" class="action-text">{{address}}</text>
       </label>
     </view>
-    <view wx:if="{{true}}" class="event-phone">
+    <view class="event-phone">
       <image class="action-icon" src="../../../img/phone.png"></image>
       <label class="action-label" for="phone">限制人数
         <text id="phone" class="action-text">{{phone}}</text>
       </label>
     </view>
-    <view wx:if="{{true}}" class="event-phone" bindtap="handlePhone">
-      <image class="action-icon" src="../../../img/phone.png"></image>
+    <view class="event-phone" >
+      <image class="action-icon" src="../../../img/xingxing.png"></image>
       <label class="action-label" for="phone">联系方式
         <text id="phone" class="action-text">{{people_number}}</text>
       </label>
+    </view>
+    <view class="event-phone">
+      <image class="action-icon" src="../../../img/wuzi.png"></image>
+      <label class="action-label" for="phone">群二维码</label>
+      <block>
+        <image class="action-image" src="{{erWeiMa}}"></image>
+      </block>
     </view>
   </view>
   <view class="content-session content-session-spacing">
@@ -44,5 +51,7 @@
   </view>
   <view><text>/t/t</text></view>
   <button bindtap="sign" type="primary" class="baoming">签到</button>
-
+  <l-dialog show="{{show_state}}" type="confirm" show-title='false' >
+      <input type='text' placeholder="请输入签到码" class="text_input"></input>
+  </l-dialog>
 </view>

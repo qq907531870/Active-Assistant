@@ -19,7 +19,7 @@
 
 .seiperTab {
   width: 100%;
-  height: calc(100vh - 190rpx);
+  height: calc(100vh - 0rpx);
 }
 
 /*我的关注  */

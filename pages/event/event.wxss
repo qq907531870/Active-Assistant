@@ -121,7 +121,11 @@
   height: 56rpx;
   line-height: 56rpx;
 }
-
+.action-image{
+  display: block;
+  width: 60%;
+  height: 160px;
+}
 .content-session .content {
   color: #4a4a4a;
   font-size: 24rpx;

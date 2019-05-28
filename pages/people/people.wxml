@@ -28,14 +28,6 @@
         <view class="item-cell-ft"></view>
       </view>
   </view> 
-  <view class="item-cells">
-    <view class="item-cell item-cell-access" catchtap="myDeliveryTap">
-      <view class="item-cell-bd">
-        <text>评论留言消息</text>
-      </view>
-      <view class="item-cell-ft"></view>
-    </view>
-  </view>
 
   <view class="item-cells">
     <view class="item-cell item-cell-access" catchtap="deliveryComments">

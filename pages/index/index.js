@@ -31,6 +31,48 @@ Page({
         position: '深圳 智能家居',
         care: 2
       },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '全球首款智能看护婴儿床',
+        position: '深圳 智能家居',
+        care: 2
+      },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '全球首款智能看护婴儿床',
+        position: '深圳 智能家居',
+        care: 2
+      },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '全球首款智能看护婴儿床',
+        position: '深圳 智能家居',
+        care: 2
+      },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '全球首款智能看护婴儿床',
+        position: '深圳 智能家居',
+        care: 2
+      },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '全球首款智能看护婴儿床',
+        position: '深圳 智能家居',
+        care: 2
+      },
+      {
+        userHead: '/img/log1.png',
+        name: '智小乖',
+        introduce: '美丽人生',
+        position: '广州 智能家居',
+        care: 2
+      }
     ]
   },
 

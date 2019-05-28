@@ -6,25 +6,25 @@
       {{item}}
     </view>
   </view>
-
   <!--进行中-->
   <view hidden="{{currentTab !== 0}}" id="one">
     <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
       <swiper-item>
         <scroll-view class='scroll' scroll-y>
           <block wx:for="{{myCare}}">
-            <view wx:if="{{item.care==0}}" class='people'>
+            <view wx:if="{{item.care==0}}" class='people' catchtap='care'>
               <image src='{{item.userHead}}' class='headimg'></image>
               <view class='per-info'>
                 <view class='name'>{{item.name}}</view>
                 <view class='company'>{{item.introduce}}</view>
                 <view class='less'>{{item.position}}</view>
               </view>
-              <view class='care-doing' catchtap='care'>
+              <view class='care-doing'>
                 <block>
                   <view>进行中</view>
                 </block>
               </view>
+              
             </view>
           </block>
         </scroll-view>
@@ -38,14 +38,14 @@
       <swiper-item>
         <scroll-view class='scroll' scroll-y>
           <block wx:for="{{myCare}}">
-            <view class='people' wx:if="{{item.care==1}}">
+            <view class='people' wx:if="{{item.care==1}}" catchtap='care'>
               <image src='{{item.userHead}}' class='headimg'></image>
               <view class='per-info'>
                 <view class='name'>{{item.name}}</view>
                 <view class='company'>{{item.introduce}}</view>
                 <view class='less'>{{item.position}}</view>
               </view>
-              <view class='care-sign' catchtap='care'>
+              <view class='care-sign'>
                 <block>
                   <view>已报名</view>
                 </block>
@@ -63,14 +63,14 @@
           <swiper-item>
             <scroll-view class='scroll' scroll-y>
               <block wx:for="{{myCare}}">
-                <view wx:if="{{item.care==2}}" class='people'>
+                <view wx:if="{{item.care==2}}" class='people' catchtap='care'>
                   <image src='{{item.userHead}}' class='headimg'></image>
                   <view class='per-info'>
                     <view class='name'>{{item.name}}</view>
                     <view class='company'>{{item.introduce}}</view>
                     <view class='less'>{{item.position}}</view>
                   </view>
-                  <view class='care-end' catchtap='care'>
+                  <view class='care-end' >
                     <block>
                       <view>已结束</view>
                     </block>

@@ -5,17 +5,20 @@ Page({
       {
         carImage: '../../../img/log1.png',
         carTitle: '木村耀司登山旅行大学生户外',
-        carShow: true
+        carShow: true,
+        state: true  //true为已签到，false为未签到
       },
       {
         carImage: '../../../img/log1.png',
         carTitle: '木村耀司登山旅行大学生户外',
-        carShow: true
+        carShow: true,
+        state: true
       },
       {
         carImage: '../../../img/log1.png',
         carTitle: '木村耀司登山旅行大学生户外',
-        carShow: true
+        carShow: true,
+        state: false
       }
     ]
   },

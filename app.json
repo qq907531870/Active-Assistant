@@ -5,11 +5,12 @@
     "pages/author/author",
     "pages/post/post",
     "pages/signIn/signIn",
+    "pages/signIn/event/event",
     "pages/event/event",
     "pages/myevents/myevent/event",
     "pages/myevents/manage/manage",
-    "pages/myevents/index"
-    
+    "pages/myevents/index",
+    "pages/edit/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -47,7 +48,6 @@
         "selectedIconPath": "img/log3-1.png",
         "text": "个人信息"
       }
-
     ]
   },
   "sitemapLocation": "sitemap.json"
